@@ -9,7 +9,7 @@ if (!isset($_SESSION['id'])) {
   </script>");
 } else {
   include 'database/connection.php';
-  include 'process/decryptPassword.php';
+  include 'process/vigenere.php';
   $id = $_SESSION['id'];
   $query = "SELECT * FROM `student_nominee` WHERE `id` = '$id' LIMIT 1";
   $data = mysqli_query($conn, $query);
